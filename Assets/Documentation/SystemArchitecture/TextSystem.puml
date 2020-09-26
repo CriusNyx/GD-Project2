@@ -1,0 +1,50 @@
+@startuml TextSystem
+
+class TextMessage{
+    // Indicates that this message starts a conversation
+    + bool startingMessage
+    // If set the conversation will end on a timeout
+    + bool endConversation
+    // Customer message
+    + string message
+    // Possible responses
+    + MessageResponse[] messageResponses
+    // Time limit to respond to a customer
+    // To make a conversation progress automatically
+    // leaves message responses empty and set a timeout
+    + float timeout
+    // Message to display on timeout
+    + TextMessage timeoutReponse
+}
+
+class MessageResponse{
+    // Option that the player can respond with
+    + string text
+    // Message the customer can respond with
+    + TextMessage nextMessage
+    // If set, the conversation will end
+    + bool endConversation
+}
+
+class Conversation{
+    // This MonoBehaviour processes logic for conversations
+    // and displays them on the ui
+    --
+    + static Conversation StartConversation(TextMessage)
+    // Updates the gui with the new message
+    - SetCurrentMessage(TextMessage)
+}
+
+class ScriptableObject{
+
+}
+
+class MonoBehaviour{
+
+}
+
+MonoBehaviour <|-- Conversation
+ScriptableObject <|-- TextMessage
+    TextMessage *-- MessageResponse
+
+@enduml
