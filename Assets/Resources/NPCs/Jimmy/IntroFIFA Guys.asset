@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5071d36b553803f41a18e38a325d9cca, type: 3}
+  m_Name: IntroFIFA Guys
+  m_EditorClassIdentifier: 
+  startingMessage: 1
+  endConversation: 0
+  message: Hello, are you the FIFA guys?
+  responses:
+  - push: 0
+    pop: 0
+    message: Yes, we are in charge of FIFA. How may I help you?
+    nextMessage: {fileID: 11400000, guid: a76e91c570fa49b4ca78c3b6869da5a4, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  - push: 0
+    pop: 0
+    message: Yes that's us! Can I help you?
+    nextMessage: {fileID: 11400000, guid: a76e91c570fa49b4ca78c3b6869da5a4, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  - push: 0
+    pop: 0
+    message: 'Never heard of it. '
+    nextMessage: {fileID: 11400000, guid: 134870a9882e0de43919bb8fa8444304, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  timeout: 0
+  timeoutResponse: {fileID: 0}
