@@ -10,20 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5071d36b553803f41a18e38a325d9cca, type: 3}
-  m_Name: StayInTheHouse
+  m_Name: WhatDoFired
   m_EditorClassIdentifier: 
-  startingMessage: 1
+  startingMessage: 0
   endConversation: 0
-  message: Carl, stay in the house
+  message: (You cant actually say that, you would get fired, silly.)
   responses:
-  - message: Okay
-    nextMessage: {fileID: 0}
-    endConversation: 1
-  - message: No
-    nextMessage: {fileID: 11400000, guid: f9da2fa5d8e784346a6a1c63d69a92d8, type: 2}
+  - push: 0
+    pop: 0
+    message: Fine... Take me back...
+    nextMessage: {fileID: 11400000, guid: 7c1efdf99beb56e47b286cab0a6406fc, type: 2}
+    popMessage: {fileID: 0}
     endConversation: 0
-  - message: 
-    nextMessage: {fileID: 0}
-    endConversation: 0
-  timeout: 4
-  timeoutResponse: {fileID: 11400000, guid: f9da2fa5d8e784346a6a1c63d69a92d8, type: 2}
+  timeout: 0
+  timeoutResponse: {fileID: 0}

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5071d36b553803f41a18e38a325d9cca, type: 3}
+  m_Name: WhatDoYouMean
+  m_EditorClassIdentifier: 
+  startingMessage: 0
+  endConversation: 0
+  message: What do you mean? He done got the water out. The console is fine.
+  responses:
+  - push: 0
+    pop: 0
+    message: I... Don't think that helped the situation.
+    nextMessage: {fileID: 11400000, guid: 3166730ef1e665444a9734af0a47bc0d, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  - push: 0
+    pop: 0
+    message: I am not sure how to help you. What would you like me to do?
+    nextMessage: {fileID: 11400000, guid: 5d29f9451d2fa50469a1df45dde12c49, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  - push: 0
+    pop: 0
+    message: I feel dumb just talking to you.
+    nextMessage: {fileID: 11400000, guid: ab8ca1205816ef345876751b5b11ec8b, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  timeout: 0
+  timeoutResponse: {fileID: 0}
