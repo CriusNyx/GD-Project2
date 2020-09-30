@@ -16,11 +16,17 @@ MonoBehaviour:
   endConversation: 0
   message: Carl, stay in the house
   responses:
-  - message: Okay
+  - push: 0
+    pop: 0
+    message: Okay
     nextMessage: {fileID: 0}
+    popMessage: {fileID: 0}
     endConversation: 1
-  - message: No
+  - push: 0
+    pop: 0
+    message: No
     nextMessage: {fileID: 11400000, guid: f9da2fa5d8e784346a6a1c63d69a92d8, type: 2}
+    popMessage: {fileID: 0}
     endConversation: 0
   timeout: 4
   timeoutResponse: {fileID: 11400000, guid: f9da2fa5d8e784346a6a1c63d69a92d8, type: 2}

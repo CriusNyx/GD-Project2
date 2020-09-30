@@ -14,7 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingMessage: 0
   endConversation: 0
-  message: 
-  responses: []
+  message: I need a refund
+  responses:
+  - push: 0
+    pop: 0
+    message: Yes, right away. I need your account number.
+    nextMessage: {fileID: 11400000, guid: 5e3301f2328f96a45ad9fc3948c4126b, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  - push: 0
+    pop: 0
+    message: No. Go Away.
+    nextMessage: {fileID: 11400000, guid: ffed9a808a3a44148aecc5c462a4d8fd, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
   timeout: 0
   timeoutResponse: {fileID: 0}

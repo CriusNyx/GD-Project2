@@ -14,7 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingMessage: 0
   endConversation: 0
-  message: 
-  responses: []
+  message: Excuse me. Do you know who I am? I could have you fired. I'm going to
+    call Yelp, and we're going to leave a review bomb for this business, and get
+    everyone here fired. My husband is the major, and will revoke your liscense,
+    so I demand you reconsider.
+  responses:
+  - push: 0
+    pop: 0
+    message: Sorry, you have to leave.
+    nextMessage: {fileID: 0}
+    popMessage: {fileID: 0}
+    endConversation: 1
   timeout: 0
   timeoutResponse: {fileID: 0}
