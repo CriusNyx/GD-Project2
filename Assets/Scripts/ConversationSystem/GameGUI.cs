@@ -36,6 +36,14 @@ public class GameGUI : MonoBehaviour
 
     private void OnGUI()
     {
+        using (new GUILayout.HorizontalScope())
+        {
+            if (GUILayout.Button("Quit Job"))
+            {
+                Application.Quit();
+            }
+        }
+
         gui.Draw();
     }
 }
