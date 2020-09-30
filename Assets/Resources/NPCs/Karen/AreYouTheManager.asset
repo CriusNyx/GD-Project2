@@ -12,9 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5071d36b553803f41a18e38a325d9cca, type: 3}
   m_Name: AreYouTheManager
   m_EditorClassIdentifier: 
-  startingMessage: 0
+  startingMessage: 1
   endConversation: 0
-  message: 
-  responses: []
+  message: Are you the manager
+  responses:
+  - push: 0
+    pop: 0
+    message: Yes, how can I help you
+    nextMessage: {fileID: 11400000, guid: 933a83ae919213846b2849f7d9081f07, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  - push: 0
+    pop: 0
+    message: No, go away
+    nextMessage: {fileID: 11400000, guid: ffed9a808a3a44148aecc5c462a4d8fd, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
   timeout: 0
   timeoutResponse: {fileID: 0}
