@@ -6,6 +6,7 @@ public class GameGUI : MonoBehaviour
 {
     StartingMessage startingMessages;
     ConversationGUI gui;
+    float lastEscapeTime = -1;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,19 @@ public class GameGUI : MonoBehaviour
     void Update()
     {
         gui.ProcessInput();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(Time.time - lastEscapeTime < 1f)
+            {
+                Application.Quit();
+                Debug.Log("Quit");
+            }
+            else
+            {
+                lastEscapeTime = Time.time;
+            }
+        }
     }
 
     private void OnGUI()
