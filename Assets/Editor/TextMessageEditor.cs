@@ -50,10 +50,11 @@ public class TextMessageEditor : Editor
 
     private T[] DrawArrayEditor<T>(GUIContent label, T[] arr, Func<T, T> valueEditor)
     {
-        if(arr == null)
+        if (arr == null)
         {
             arr = new T[0];
         }
+
         DrawHLine();
         GUILayout.Label(label);
         DrawHLine();
@@ -61,15 +62,24 @@ public class TextMessageEditor : Editor
         for (int i = 0; i < arr.Length; i++)
         {
             arr[i] = valueEditor(arr[i]);
+            if (GUILayout.Button("Remove"))
+            {
+                List<T> items = new List<T>(arr);
+                items.RemoveAt(i);
+                return items.ToArray();
+            }
             DrawHLine();
         }
+
         DrawHLine();
+
         if (GUILayout.Button("Add Element"))
         {
             var newArr = new T[arr.Length + 1];
             Array.Copy(arr, 0, newArr, 0, arr.Length);
             arr = newArr;
         }
+
         DrawHLine();
         DrawHLine();
 
@@ -78,12 +88,12 @@ public class TextMessageEditor : Editor
 
     private static MessageResponse ResponseEditor(MessageResponse response)
     {
-        if(response == null)
+        if (response == null)
         {
             response = new MessageResponse();
         }
         response.message = EditorGUILayout.TextField(
-            new GUIContent("Message", "An option the player can choose to respond with"), 
+            new GUIContent("Message", "An option the player can choose to respond with"),
             response.message);
 
         response.nextMessage = EditorGUILayout.ObjectField(
@@ -94,8 +104,24 @@ public class TextMessageEditor : Editor
             allowSceneObjects: false)
             as TextMessage;
 
+        response.push = EditorGUILayout.Toggle(
+            new GUIContent("Push", "If checked this response will push the following message on the stack."),
+            response.push);
+
+        response.popMessage = EditorGUILayout.ObjectField(
+            new GUIContent(
+                "Pop Message", "If this response is marked as a push response, This message will display after a stack pop."),
+            response.popMessage,
+            typeof(TextMessage),
+            allowSceneObjects: false)
+            as TextMessage;
+
+        response.pop = EditorGUILayout.Toggle(
+            new GUIContent("Pop", "If this message is set to pop, it will pop the stack, returning control flow to the last set pop message."),
+            response.pop);
+
         response.endConversation = EditorGUILayout.Toggle(
-            new GUIContent("End Conversation", "If checked, the conversation will end after this option is selected."), 
+            new GUIContent("End Conversation", "If checked, the conversation will end after this option is selected."),
             response.endConversation);
 
         return response;
