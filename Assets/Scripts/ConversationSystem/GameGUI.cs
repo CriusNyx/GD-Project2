@@ -56,6 +56,11 @@ How to handle different customer situations.
                 lastEscapeTime = Time.time;
             }
         }
+
+        foreach(var conversation in conversations)
+        {
+            conversation.Update();
+        }
     }
 
     int fixedFrameCount = 0;
