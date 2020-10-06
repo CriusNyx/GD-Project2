@@ -33,22 +33,31 @@ public class ConversationGUI
 
     public void Draw()
     {
+
         scrollPosition = GUILayout.BeginScrollView(scrollPosition);
         {
-            response = GUILayout.TextField(response);
-            foreach (var message in conversation.GetConversation())
+            using (new GUILayout.VerticalScope())
             {
-                GUILayout.Label(message);
-            }
+                response = GUILayout.TextField(response);
+                foreach (var message in conversation.GetConversation())
+                {
+                    GUILayout.Label(message);
+                }
 
-            var responses = conversation.GetResponses();
+                var responses = conversation.GetResponses();
 
-            for (int i = 0; i < responses.Length; i++)
-            {
-                var response = responses[i];
-                GUILayout.Label((i + 1) + ": " + response);
+                for (int i = 0; i < responses.Length; i++)
+                {
+                    var response = responses[i];
+                    GUILayout.Label((i + 1) + ": " + response);
+                }
             }
         }
         GUILayout.EndScrollView();
+    }
+
+    public void Update()
+    {
+        this.conversation.Update();
     }
 }
