@@ -10,29 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5071d36b553803f41a18e38a325d9cca, type: 3}
-  m_Name: StayInTheHouse
+  m_Name: Start
   m_EditorClassIdentifier: 
   startingMessage: 0
   endConversation: 0
-  message: Carl, stay in the house
+  message: Hi. My game keeps crashing. Can you help me.
   responses:
   - push: 0
     pop: 0
-    message: Okay
-    nextMessage: {fileID: 0}
-    popMessage: {fileID: 0}
-    endConversation: 1
-  - push: 0
-    pop: 0
-    message: No
-    nextMessage: {fileID: 11400000, guid: f9da2fa5d8e784346a6a1c63d69a92d8, type: 2}
+    message: You should consider purchasing a different EA product.
+    nextMessage: {fileID: 11400000, guid: b5c2dc30be4cd684496898978bfbb68b, type: 2}
     popMessage: {fileID: 0}
     endConversation: 0
   - push: 0
     pop: 0
-    message: 
+    message: Did you try restarting it?
     nextMessage: {fileID: 0}
     popMessage: {fileID: 0}
     endConversation: 0
-  timeout: 4
-  timeoutResponse: {fileID: 11400000, guid: f9da2fa5d8e784346a6a1c63d69a92d8, type: 2}
+  timeout: 0
+  timeoutResponse: {fileID: 0}
