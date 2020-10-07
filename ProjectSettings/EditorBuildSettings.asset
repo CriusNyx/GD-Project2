@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Trophy.unity
+    guid: 91b11843274136d4cbf1c0bff1bd3586
+  - enabled: 1
     path: Assets/Scenes/Title.unity
     guid: 19621421f3afbb14db7ec088b58d0cc6
   - enabled: 1
