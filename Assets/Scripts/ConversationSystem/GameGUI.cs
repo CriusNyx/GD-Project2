@@ -9,7 +9,7 @@ public class GameGUI : MonoBehaviour
     ConversationGUI currentGui;
     List<string> complaints = new List<string>();
     float lastEscapeTime = -1;
-
+    int salary = 25000;
     string companyPolicy =
 @"Company Policy:
 
@@ -117,6 +117,7 @@ How to handle different customer situations.
                 GUILayout.Label(companyPolicy);
                 if (GUILayout.Button("Help"))
                 {
+                    salary -= 25;
                     StartCoroutine(RequestHelp());
                 }
                 GUILayout.Label(helpStatus);
@@ -125,6 +126,10 @@ How to handle different customer situations.
                 {
                     GUILayout.Label(complaint);
                 }
+            }
+            using (new GUILayout.HorizontalScope())
+            {
+                GUILayout.Label("Salary: $" + salary);
             }
         }
     }
@@ -137,7 +142,7 @@ How to handle different customer situations.
         {
             helpLock = true;
 
-            helpStatus = "You have requested for help from your boss. You will receive help soon.";
+            helpStatus = "You have requested for help from your boss. You will receive help soon. You have been fined $25 for asking for help.";
             yield return new WaitForSeconds(10);
             helpStatus = "";
             helpLock = false;
@@ -147,16 +152,25 @@ How to handle different customer situations.
     private IEnumerator Complaint()
     {
         yield return new WaitForSeconds(30);
-        complaints.Add("You have received a complaint from a customer. If you receive too many complaints, you will be considered for termination.");
+        complaints.Add("You have received a complaint from a customer. If you receive too many complaints, you will be considered for termination. Your salary has been deducted by $500.");
+        salary -= 500;
         yield return new WaitForSeconds(12);
-        complaints.Add("You have received a complaint from a customer. If you receive too many complaints, you will be considered for termination.");
+        complaints.Add("You have received a complaint from a customer. If you receive too many complaints, you will be considered for termination. Your salary has been deducted by $10000.");
+        salary -= 10000;
         yield return new WaitForSeconds(30);
-        complaints.Add("You have received a complaint from a customer. If you receive too many complaints, you will be considered for termination.");
+        complaints.Add("You have received a complaint from a customer. If you receive too many complaints, you will be considered for termination. Your salary has been deducted by $7500");
+        salary -= 7500;
         yield return new WaitForSeconds(20);
-        complaints.Add("You have received a complaint from a customer. If you receive too many complaints, you will be considered for termination.");
+        complaints.Add("You have received a complaint from a customer. If you receive too many complaints, you will be considered for termination. Your salary has been deducted by $200.");
         yield return new WaitForSeconds(40);
-        complaints.Add("You have received a complaint from a customer. If you receive too many complaints, you will be considered for termination.");
-        yield return new WaitForSeconds(1);
-        complaints.Add("You have received a complaint from a customer. If you receive too many complaints, you will be considered for termination.");
+        salary -= 200;
+        complaints.Add("You have received a complaint from a customer. If you receive too many complaints, you will be considered for termination. Your salary has been deducted by $2500.");
+        salary -= 2500;
+        yield return new WaitForSeconds(3);
+        complaints.Add("You have received a complaint from a customer. If you receive too many complaints, you will be considered for termination. Your salary has been deducted by $999");
+        salary -= 999;
+        yield return new WaitForSeconds(10);
+        complaints.Add("Your performance has dropped low to earn pay. You are now EA's official indentured servant, as per your contract.");
+        salary = 0;
     }
 }
