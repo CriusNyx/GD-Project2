@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5071d36b553803f41a18e38a325d9cca, type: 3}
+  m_Name: 3.23
+  m_EditorClassIdentifier: 
+  startingMessage: 0
+  endConversation: 0
+  message: 'How do i do that? '
+  responses:
+  - push: 0
+    pop: 0
+    message: 'Just do it '
+    nextMessage: {fileID: 11400000, guid: 2be740f7f96edce4aa01d409a6601df6, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  - push: 0
+    pop: 0
+    message: 'Look up a youtube video '
+    nextMessage: {fileID: 11400000, guid: a1c1557f519d353409deb648136fef88, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  timeout: 0
+  timeoutResponse: {fileID: 0}

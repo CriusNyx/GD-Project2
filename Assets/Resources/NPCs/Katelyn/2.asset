@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5071d36b553803f41a18e38a325d9cca, type: 3}
+  m_Name: 2
+  m_EditorClassIdentifier: 
+  startingMessage: 0
+  endConversation: 0
+  message: 'I typed in what I usually type in for my password and it doesn''t work. '
+  responses:
+  - push: 0
+    pop: 0
+    message: What is your user name and password I will try to log in for you
+    nextMessage: {fileID: 11400000, guid: 2d4602f3cf4305346aeb123aabfb6b29, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  - push: 0
+    pop: 0
+    message: Can I get your social security number and your full name to verify your
+      identity
+    nextMessage: {fileID: 11400000, guid: db2c1160e06996c49acc78f7a068682e, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  timeout: 0
+  timeoutResponse: {fileID: 0}
