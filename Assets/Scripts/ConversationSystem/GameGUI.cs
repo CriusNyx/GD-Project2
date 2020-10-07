@@ -7,6 +7,7 @@ public class GameGUI : MonoBehaviour
     StartingMessage startingMessages;
     List<ConversationGUI> conversations = new List<ConversationGUI>();
     ConversationGUI currentGui;
+    List<string> complaints = new List<string>();
     float lastEscapeTime = -1;
 
     string companyPolicy =
@@ -31,12 +32,17 @@ How to handle different customer situations.
 4. If the customer expresses that they do not understand EA's policy, please politely inform them.
 5. If a customer expresses disagreement with the policy, gently remind the customer that they have already agreed to the policy, and that they are bound by contract.";
 
+    bool helpLock;
+    string helpStatus = "";
+
     // Start is called before the first frame update
     void Start()
     {
         startingMessages = new StartingMessage();
         currentGui = new ConversationGUI(new Conversation(startingMessages.GetOne()));
         conversations.Add(currentGui);
+
+        StartCoroutine(Complaint());
     }
 
     // Update is called once per frame
@@ -109,7 +115,48 @@ How to handle different customer situations.
             using (new GUILayout.VerticalScope())
             {
                 GUILayout.Label(companyPolicy);
+                if (GUILayout.Button("Help"))
+                {
+                    StartCoroutine(RequestHelp());
+                }
+                GUILayout.Label(helpStatus);
+                GUILayout.Label("Job Preformance:");
+                foreach(var complaint in complaints)
+                {
+                    GUILayout.Label(complaint);
+                }
             }
         }
+    }
+
+    
+
+    private IEnumerator RequestHelp()
+    {
+        if (!helpLock)
+        {
+            helpLock = true;
+
+            helpStatus = "You have requested for help from your boss. You will receive help soon.";
+            yield return new WaitForSeconds(10);
+            helpStatus = "";
+            helpLock = false;
+        }
+    }
+
+    private IEnumerator Complaint()
+    {
+        yield return new WaitForSeconds(30);
+        complaints.Add("You have received a complaint from a customer. If you receive too many complaints, you will be considered for termination.");
+        yield return new WaitForSeconds(12);
+        complaints.Add("You have received a complaint from a customer. If you receive too many complaints, you will be considered for termination.");
+        yield return new WaitForSeconds(30);
+        complaints.Add("You have received a complaint from a customer. If you receive too many complaints, you will be considered for termination.");
+        yield return new WaitForSeconds(20);
+        complaints.Add("You have received a complaint from a customer. If you receive too many complaints, you will be considered for termination.");
+        yield return new WaitForSeconds(40);
+        complaints.Add("You have received a complaint from a customer. If you receive too many complaints, you will be considered for termination.");
+        yield return new WaitForSeconds(1);
+        complaints.Add("You have received a complaint from a customer. If you receive too many complaints, you will be considered for termination.");
     }
 }

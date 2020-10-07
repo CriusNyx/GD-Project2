@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5071d36b553803f41a18e38a325d9cca, type: 3}
-  m_Name: TimeoutTest
+  m_Name: Irate2
   m_EditorClassIdentifier: 
   startingMessage: 0
   endConversation: 0
-  message: TimeoutTest
+  message: I don't understand.
   responses: []
-  timeout: 10
-  timeoutResponse: {fileID: 11400000, guid: 243bcf1c1c0264846aa5fb726b3f95ce, type: 2}
+  timeout: 3
+  timeoutResponse: {fileID: 11400000, guid: ce393af9a87ef1f41804e8cda8168c0d, type: 2}
