@@ -121,7 +121,7 @@ How to handle different customer situations.
                     StartCoroutine(RequestHelp());
                 }
                 GUILayout.Label(helpStatus);
-                GUILayout.Label("Job Preformance:");
+                GUILayout.Label("Job Performance:");
                 foreach(var complaint in complaints)
                 {
                     GUILayout.Label(complaint);
