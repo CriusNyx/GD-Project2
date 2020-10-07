@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5071d36b553803f41a18e38a325d9cca, type: 3}
-  m_Name: TimeoutTest
+  m_Name: NotHelping2
   m_EditorClassIdentifier: 
   startingMessage: 0
   endConversation: 0
-  message: TimeoutTest
+  message: If you were trying to help you would give me a refund.
   responses: []
-  timeout: 10
-  timeoutResponse: {fileID: 11400000, guid: 243bcf1c1c0264846aa5fb726b3f95ce, type: 2}
+  timeout: 3
+  timeoutResponse: {fileID: 11400000, guid: a0b11a954821da34d824abec66b5fc33, type: 2}
