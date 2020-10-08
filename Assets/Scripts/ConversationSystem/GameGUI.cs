@@ -89,6 +89,8 @@ How to handle different customer situations.
 
     private void OnGUI()
     {
+        gui.Draw();
+        
         using (new GUILayout.HorizontalScope())
         {
             using (new GUILayout.VerticalScope())
