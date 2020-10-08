@@ -31,7 +31,7 @@ MonoBehaviour:
   - push: 0
     pop: 0
     message: And? How is this my problem?
-    nextMessage: {fileID: 0}
+    nextMessage: {fileID: 11400000, guid: 134870a9882e0de43919bb8fa8444304, type: 2}
     popMessage: {fileID: 0}
     endConversation: 0
   timeout: 0
