@@ -102,7 +102,7 @@ How to handle different customer situations.
                     int counter = 1;
                     foreach (var conversation in conversations)
                     {
-                        if (GUILayout.Button($"Conversation {counter}"))
+                        if (GUILayout.Button($"Call {counter}", GUILayout.Width(70)))
                         {
                             currentGui = conversation;
                         }
