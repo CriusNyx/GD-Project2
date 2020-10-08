@@ -27,7 +27,7 @@ MonoBehaviour:
     pop: 0
     message: Well our Premium packs offer a higher chance of getting a high level
       player!
-    nextMessage: {fileID: 0}
+    nextMessage: {fileID: 11400000, guid: acb338830b389934c8f1c0e2e5c61b7b, type: 2}
     popMessage: {fileID: 0}
     endConversation: 0
   - push: 0

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5071d36b553803f41a18e38a325d9cca, type: 3}
+  m_Name: Irate7
+  m_EditorClassIdentifier: 
+  startingMessage: 0
+  endConversation: 0
+  message: Now.
+  responses:
+  - push: 0
+    pop: 0
+    message: EA does not offer a refund for any of it's product for any reason.
+    nextMessage: {fileID: 11400000, guid: a0b11a954821da34d824abec66b5fc33, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  - push: 0
+    pop: 0
+    message: I'm sorry, but EA policy does not allow me to offer you a refund.
+    nextMessage: {fileID: 11400000, guid: 2fc36a16fe6f092419334cd89c5fe66e, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  - push: 0
+    pop: 0
+    message: Have you looked at our policy?
+    nextMessage: {fileID: 11400000, guid: 2fc36a16fe6f092419334cd89c5fe66e, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  timeout: 0
+  timeoutResponse: {fileID: 0}

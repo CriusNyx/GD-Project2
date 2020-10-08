@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5071d36b553803f41a18e38a325d9cca, type: 3}
+  m_Name: JustWantARefund
+  m_EditorClassIdentifier: 
+  startingMessage: 0
+  endConversation: 0
+  message: I just want a refund.
+  responses:
+  - push: 0
+    pop: 0
+    message: Okay. I'm trying to help with that, but I need some more information.
+    nextMessage: {fileID: 11400000, guid: 7811bca52f12d834db4d6b19efa8dd1b, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  - push: 0
+    pop: 0
+    message: Okay. Could I have your account number please.
+    nextMessage: {fileID: 11400000, guid: 6d1cc695a80c29648b6fe657c64e4dcb, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  - push: 0
+    pop: 0
+    message: I'm sorry sir, but Electronic Arts does not offer refunds to customers.
+    nextMessage: {fileID: 11400000, guid: f1b3f37b3fe76f0448d06448f626913b, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  timeout: 0
+  timeoutResponse: {fileID: 0}

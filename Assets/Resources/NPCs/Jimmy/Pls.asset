@@ -20,13 +20,13 @@ MonoBehaviour:
     pop: 0
     message: Our packs offer many extra perks and players to help strenghten your
       team! I can help you obtain a Premium pack with even better rewards!
-    nextMessage: {fileID: 0}
+    nextMessage: {fileID: 11400000, guid: acb338830b389934c8f1c0e2e5c61b7b, type: 2}
     popMessage: {fileID: 0}
     endConversation: 0
   - push: 0
     pop: 0
     message: I'm sorry, we only sell packs, not individual players.
-    nextMessage: {fileID: 0}
+    nextMessage: {fileID: 11400000, guid: acb338830b389934c8f1c0e2e5c61b7b, type: 2}
     popMessage: {fileID: 0}
     endConversation: 0
   - push: 0

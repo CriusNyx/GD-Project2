@@ -19,14 +19,14 @@ MonoBehaviour:
   - push: 0
     pop: 0
     message: Of course! Just read me off the information and I will be happy to help!
-    nextMessage: {fileID: 0}
+    nextMessage: {fileID: 11400000, guid: 4b5746e0310170643a5e24149fc4bc3a, type: 2}
     popMessage: {fileID: 0}
     endConversation: 0
   - push: 0
     pop: 0
     message: I'm sorry, you would need her permission and I would need to speak to
       her to continue.
-    nextMessage: {fileID: 0}
+    nextMessage: {fileID: 11400000, guid: 134870a9882e0de43919bb8fa8444304, type: 2}
     popMessage: {fileID: 0}
     endConversation: 0
   - push: 0

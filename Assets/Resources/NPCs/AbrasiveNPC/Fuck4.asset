@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5071d36b553803f41a18e38a325d9cca, type: 3}
+  m_Name: Fuck4
+  m_EditorClassIdentifier: 
+  startingMessage: 0
+  endConversation: 0
+  message: Fuck You
+  responses: []
+  timeout: 3
+  timeoutResponse: {fileID: 11400000, guid: 44e5ca17bd47e9548b2988ea4ec1b3bf, type: 2}

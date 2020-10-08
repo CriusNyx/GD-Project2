@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5071d36b553803f41a18e38a325d9cca, type: 3}
+  m_Name: FakeMom
+  m_EditorClassIdentifier: 
+  startingMessage: 0
+  endConversation: 0
+  message: Okay one second... Hello, this is Jimmy's mom. What do you need from me?
+  responses:
+  - push: 0
+    pop: 0
+    message: Hi ma'am, I just need your authorization to use your card for a purchase!
+    nextMessage: {fileID: 11400000, guid: e3eb9b49d25ff31438d5a164e9cb5d07, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  - push: 0
+    pop: 0
+    message: I'm sorry ma'am, but I need to verify your identity.
+    nextMessage: {fileID: 11400000}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  - push: 0
+    pop: 0
+    message: I'm not gonna fall for this
+    nextMessage: {fileID: 11400000, guid: 134870a9882e0de43919bb8fa8444304, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  timeout: 0
+  timeoutResponse: {fileID: 0}

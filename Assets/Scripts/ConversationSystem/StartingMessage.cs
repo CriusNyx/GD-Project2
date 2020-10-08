@@ -14,12 +14,9 @@ public class StartingMessage
             .Select(x => x as TextMessage)
             .Where(x => x.startingMessage)
             .ToList();
-
-        foreach(var message in startingMessages)
-        {
-            Debug.Log(message.message);
-        }
     }
+
+    public bool IsEmpty => startingMessages.Count == 0;
 
     public TextMessage GetOne()
     {

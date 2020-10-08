@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5071d36b553803f41a18e38a325d9cca, type: 3}
+  m_Name: start
+  m_EditorClassIdentifier: 
+  startingMessage: 1
+  endConversation: 0
+  message: 'Hey I cant login to my account, can you help me? '
+  responses:
+  - push: 0
+    pop: 0
+    message: 'Yea sure, did you forget your password? '
+    nextMessage: {fileID: 11400000, guid: 55e56c4984ac58542a288b6ec0f71cb3, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  - push: 0
+    pop: 0
+    message: 'One second, let me finish eating this bagel. '
+    nextMessage: {fileID: 11400000, guid: c74b3183604dd4045bc6ff6ae5b43e1e, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  timeout: 0
+  timeoutResponse: {fileID: 0}

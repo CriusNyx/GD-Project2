@@ -7,6 +7,7 @@ public class Conversation
 {
     public List<string> lines = new List<string>();
     private TextMessage currentMessage;
+    public float? timeToTimeout;
 
     public Conversation(TextMessage message)
     {
@@ -36,13 +37,26 @@ public class Conversation
         if (message != null)
         {
             lines.Add(message.message);
+
+            if (message.timeout > 0f)
+            {
+                timeToTimeout = Time.time + message.timeout;
+            }
+            else
+            {
+                timeToTimeout = null;
+            }
+        }
+        else
+        {
+            timeToTimeout = null;
         }
         this.currentMessage = message;
     }
 
     public bool SetResponse(int number)
     {
-        if(0 <= number && number < currentMessage.responses.Length)
+        if (0 <= number && number < currentMessage.responses.Length)
         {
             var response = currentMessage.responses[number];
             lines.Add(response.message);
@@ -50,5 +64,13 @@ public class Conversation
             return true;
         }
         return false;
+    }
+
+    public void Update()
+    {
+        if (timeToTimeout != null && Time.time > timeToTimeout)
+        {
+            SetCurrentMessage(currentMessage.timeoutResponse);
+        }
     }
 }

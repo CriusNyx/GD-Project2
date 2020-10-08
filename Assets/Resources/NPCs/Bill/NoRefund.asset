@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5071d36b553803f41a18e38a325d9cca, type: 3}
+  m_Name: NoRefund
+  m_EditorClassIdentifier: 
+  startingMessage: 0
+  endConversation: 0
+  message: I don't want no damn, refund boy! Fix the game, or I'll find someone who
+    can!
+  responses:
+  - push: 0
+    pop: 0
+    message: I'm sorry to hear that, can you give me your account number anyway so
+      I can better serve you?
+    nextMessage: {fileID: 11400000, guid: aa60c3af3ec184e4ba88180d38f4cca5, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  - push: 0
+    pop: 0
+    message: You're being awfully disrespectful.
+    nextMessage: {fileID: 11400000, guid: f0c8de1585dc06142a68400f73c4e45c, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  - push: 0
+    pop: 0
+    message: Okay, what was going on when the game broke?
+    nextMessage: {fileID: 11400000, guid: b1eb7a92b85df5f4cbd9c09551c43a2d, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  timeout: 0
+  timeoutResponse: {fileID: 0}
