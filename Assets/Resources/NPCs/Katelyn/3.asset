@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5071d36b553803f41a18e38a325d9cca, type: 3}
+  m_Name: 3
+  m_EditorClassIdentifier: 
+  startingMessage: 0
+  endConversation: 0
+  message: hurry up I NEED HELP!
+  responses:
+  - push: 0
+    pop: 0
+    message: Don't rush me IM EATING!
+    nextMessage: {fileID: 11400000, guid: 6dc635f6c12077d4bb98ca4b88be7157, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  - push: 0
+    pop: 0
+    message: 'ok how can I help you? '
+    nextMessage: {fileID: 11400000, guid: b4e90b0340e64654cb5b998b1228b79e, type: 2}
+    popMessage: {fileID: 0}
+    endConversation: 0
+  timeout: 0
+  timeoutResponse: {fileID: 0}
